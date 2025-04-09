@@ -105,8 +105,8 @@ function Contact() {
         <button className='text-lg bg-black p-2 px-7 rounded-2xl' onClick={handleSubmit}>{loading?"Sending...":"Send"}</button>
         <div className='flex justify-around p-2'>
           <a href="https://github.com/Praneeth9nitin" target='_blank'><img src={github} width={50} alt="" className='cursor-pointer border-2 rounded-full border-black' /></a>
-          <a href="https://www.linkedin.com/in/praneethnitin/" target='_blank'><img src={twitter} width={50} alt="" className='cursor-pointer border-2 rounded-full border-black'/></a>
-          <a href="https://x.com/praneeth__gupta" target='_blank'><img src={linkedin} width={50} alt="" className='cursor-pointer border-2 rounded-full border-black'/></a>
+          <a href="https://x.com/praneeth__gupta" target='_blank'><img src={twitter} width={50} alt="" className='cursor-pointer border-2 rounded-full border-black'/></a>
+          <a href="https://www.linkedin.com/in/praneethnitin/" target='_blank'><img src={linkedin} width={50} alt="" className='cursor-pointer border-2 rounded-full border-black'/></a>
         </div>
       </div>
       </div>
