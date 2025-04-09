@@ -69,36 +69,8 @@ body{
 }
 
 @media screen and (max-width: 768px) {
-    .main{
-        flex-direction: column;
-    }
-    .image:first-child{
-        transition: all 0.5s ease-in-out;
-        transform: perspective(1000px) rotatex(-45deg);
-        scale: 1;
-        position: relative;
-        z-index: 1;
-    }
-    .image:nth-child(3){
-        transform: perspective(1000px) rotateX(45deg);
-        scale: 1;
-        position: relative;
-        z-index: 1;
-    }
-    .image:nth-child(2){
-        transition: all 0.5s ease-in-out;
-        transform: perspective(1000px) rotateX(0deg);
-        scale: 1;
-        position: relative;
-        z-index: 1;
-    }
-    .image:first-child:hover {
-        transform: perspective(1000px) rotateX(0deg);
-        position: relative;
-        z-index: 1;
-    }
-    .image:first-child:hover + .image:nth-child(2){
-        transform: perspective(1000px) rotateX(45deg) translateY(50px);
+    .back{
+        background-color: white;
     }
 }
 
