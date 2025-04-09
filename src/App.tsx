@@ -5,6 +5,7 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import ProjectsLink from './components/ProjectsLink'
+import Contact from './components/Contact'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Skills />
       <Projects />
       <ProjectsLink />
+      <Contact />
     </BrowserRouter>
   )
 }

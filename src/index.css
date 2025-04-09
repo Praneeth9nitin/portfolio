@@ -13,7 +13,14 @@
     --tw-shadow-colored: 0px 35px 120px -15px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: var(--color-back);
+}
 
+@media screen and (min-width: 768px) {
 .image:first-child{
     transition: all 0.5s ease-in-out;
     transform: perspective(1000px) rotateY(40deg);
@@ -29,6 +36,7 @@
     scale: 1.2;
     position: relative;
     z-index: 1;
+    /* filter: blur(2px); */
 }
 
 .image:first-child:hover {
@@ -36,26 +44,61 @@
     translate: 100px;
     position: relative;
     z-index: 1;
+    /* filter: blur(2px); */
 }
 
 .image:nth-child(3):hover{
     transform: perspective(600px) rotateY(0deg) scale(1.2);
     translate: -100px;
-    flex-direction: row-reverse;
+    /* filter: blur(2px); */
 }
 
 .image:first-child:hover + .image:nth-child(2){
     transition: all 0.5s ease-in-out;
     transform: perspective(600px) rotateY(-40deg) scale(0.8);
     translate: 100px;
+    /* filter:blur(0px); */
 }
 
 .main:has(.image:last-child:hover) .image:nth-child(2){
     transition: all 0.5s ease-in-out;
     transform: perspective(600px) rotateY(40deg) scale(0.8);
     translate: -100px;
+    /* filter:blur(0px); */
+}
 }
 
-
-
+@media screen and (max-width: 768px) {
+    .main{
+        flex-direction: column;
+    }
+    .image:first-child{
+        transition: all 0.5s ease-in-out;
+        transform: perspective(1000px) rotatex(-45deg);
+        scale: 1;
+        position: relative;
+        z-index: 1;
+    }
+    .image:nth-child(3){
+        transform: perspective(1000px) rotateX(45deg);
+        scale: 1;
+        position: relative;
+        z-index: 1;
+    }
+    .image:nth-child(2){
+        transition: all 0.5s ease-in-out;
+        transform: perspective(1000px) rotateX(0deg);
+        scale: 1;
+        position: relative;
+        z-index: 1;
+    }
+    .image:first-child:hover {
+        transform: perspective(1000px) rotateX(0deg);
+        position: relative;
+        z-index: 1;
+    }
+    .image:first-child:hover + .image:nth-child(2){
+        transform: perspective(1000px) rotateX(45deg) translateY(50px);
+    }
+}
 

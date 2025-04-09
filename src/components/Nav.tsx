@@ -4,7 +4,7 @@ import { nav } from "./content"
 import menu from "../assets/menu.svg"
 import cross from "../assets/cross.svg"
 import { useNavigate } from "react-router-dom"
-
+  
 function Nav() {
     const [active, setActive] = useState("")
     const [toggle, setToggle] = useState(false)
@@ -18,7 +18,7 @@ function Nav() {
             </div>
             <ul className="flex gap-10">
                 {nav.map((items, index) =>
-                    <li key={index} className={`text-xl hidden md:block hover:text-white transition duration-300 ease-in-out ${(active === items.text) ? "text-white" : "text-slate-300"}`} onClick={() => setActive(items.text)}>
+                    <li key={index} className={`text-xl hidden md:block hover:text-white transition duration-300 ease-in-out ${(active === items.text) ? "text-white" : "text-slate-300"}`} onClick={() => {setActive(items.text);}}>
                         <a href={`#${items.link}`}>{items.text}</a>
                     </li>
                 )}
@@ -29,7 +29,7 @@ function Nav() {
                         <img src={cross} alt="" className="cursor-pointer m-2" onClick={()=>setToggle(false)}/>
                         <ul className="absolute p-5 backdrop-blur-none bg-gradient-to-r from-gray-400 to-black backdrop-opacity-10 rounded-lg right-1">
                             {nav.map((items, index) =>
-                                <li key={index} className={`hover:text-white py-3 ${(active === items.text) ? "text-white" : "text-slate-300"}`} onClick={() =>{ setActive(items.text); setToggle(false)}}>
+                                <li key={index} className={`hover:text-white py-3 ${(active === items.text) ? "text-white" : "text-slate-300"}`} onClick={() =>{ setActive(items.text); setToggle(false);}}>
                                     <a href={`#${items.link}`}>{items.text}</a>
                                 </li>
                             )}
