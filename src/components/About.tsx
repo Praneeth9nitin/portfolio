@@ -7,7 +7,6 @@ import { useRef } from 'react'
 gsap.registerPlugin(ScrollTrigger);
 
 function About() {
-    const about = useRef<HTMLDivElement>(null)
   
     useGSAP(()=>{
         gsap.from('.about',{
